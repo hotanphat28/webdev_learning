@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,700;0,900;1,100;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.4;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+
+.social__icons__list,
+.hero__design {
+  display: none;
+}
+
+header,
+footer {
+  padding: 1em 2rem;
+}
+
+header .logo__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo__nav__logo {
+  color: #fca311;
+  font-weight: 900;
+  font-size: 3rem;
+}
+header .logo__nav__nav__list {
+  opacity: 0;
+}
+header .logo__nav__hamburger {
+  width: 2em;
+  height: 0.1875em;
+  background: #161616;
+  border-radius: 1em;
+  position: relative;
+}
+header .logo__nav__hamburger::before, header .logo__nav__hamburger::after {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 0.1875em;
+  border-radius: 1em;
+  background: #161616;
+}
+header .logo__nav__hamburger::before {
+  bottom: 0.5em;
+}
+header .logo__nav__hamburger::after {
+  top: 0.5em;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 2em 2rem;
+  background: #182645;
+}
+.hero__content__heading {
+  color: #f6f6f6;
+  text-align: center;
+}
+.hero__content__meetMe {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 700;
+  color: #fca311;
+  text-transform: uppercase;
+}
+.hero__content__scrollIcon {
+  width: 1em;
+}
+
+section {
+  padding: 4em 2rem;
+  text-align: center;
+}
+
+.featured {
+  position: relative;
+}
+.featured::before {
+  content: "";
+  position: absolute;
+  top: -2em;
+  left: -2em;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  background: #182645;
+  opacity: 0.2;
+  z-index: -1;
+}
+.featured__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.featured__content__title {
+  color: #182645;
+}
+
+.skills {
+  background: #fca311;
+}
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.skills__list__item {
+  background: #f6f6f6;
+  padding: 2em 1rem;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.skills__list__item__title {
+  text-transform: uppercase;
+  color: #182645;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.portfolio__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.portfolio__wrap__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+footer {
+  background: #161616;
+  color: #f6f6f6;
+}
+
+@media (min-width: 75em) {
+  html {
+    font-size: 130%;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 66% auto;
+  }
+  header .logo__nav__nav__list {
+    opacity: 1;
+    display: flex;
+    gap: 2em;
+  }
+  header .logo__nav__nav__list a {
+    color: #161616;
+    font-weight: 700;
+  }
+  header .logo__nav__hamburger {
+    display: none;
+  }
+  header .social__icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  header .social__icons__list {
+    display: flex;
+    gap: 2em;
+  }
+  header .social__icons__list img {
+    border-radius: 0;
+  }
+  .hero {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 66% auto;
+  }
+  .hero__content {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .hero__content__heading {
+    text-align: unset;
+    font-size: 3.1rem;
+  }
+  .hero__design {
+    display: block;
+    width: 100%;
+    margin-left: -50%;
+  }
+  section {
+    padding: 5em 2rem;
+  }
+  .featured {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+  .featured::before {
+    content: "";
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    background: #182645;
+    top: -4em;
+    left: -4em;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .featured__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .featured__image {
+    width: 50%;
+  }
+  .skills__list {
+    flex-direction: row;
+  }
+  .portfolio {
+    flex-direction: row;
+  }
+  .portfolio__wrap__image img {
+    height: 20em;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,700;0,900;1,100;1,500;1,700;1,900&display=swap');
+$primary-color: #182645;
+$secondary-color: #fca311;
+$white-color: #f6f6f6;
+$black-color: #161616;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	border: none;
+	outline: none;
+}
+html {
+	scroll-behavior: smooth;
+	line-height: 1.4;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.5;
+	height: 100vh;
+	overflow-x: hidden;
+}
+img {
+	width: 100%;
+	height: auto;
+	border-radius: 1em;
+}
+.social__icons__list,
+.hero__design {
+	display: none;
+}
+header,
+footer {
+	padding: 1em 2rem;
+}
+header {
+	.logo__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&__logo {
+			color: $secondary-color;
+			font-weight: 900;
+			font-size: 3rem;
+		}
+		&__nav__list {
+			opacity: 0;
+		}
+		&__hamburger {
+			width: 2em;
+			height: 0.1875em;
+			background: $black-color;
+			border-radius: 1em;
+			position: relative;
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 2em;
+				height: 0.1875em;
+				border-radius: 1em;
+				background: $black-color;
+			}
+			&::before {
+				bottom: 0.5em;
+			}
+			&::after {
+				top: 0.5em;
+			}
+		}
+	}
+}
+.hero {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2em;
+		padding: 2em 2rem;
+		background: $primary-color;
+		&__heading {
+			color: $white-color;
+			text-align: center;
+		}
+		&__meetMe {
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+			font-weight: 700;
+			color: $secondary-color;
+			text-transform: uppercase;
+		}
+		&__scrollIcon {
+			width: 1em;
+		}
+	}
+}
+section {
+	padding: 4em 2rem;
+	text-align: center;
+}
+.featured {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: -2em;
+		left: -2em;
+		width: 10em;
+		height: 10em;
+		border-radius: 50%;
+		background: $primary-color;
+		opacity: 0.2;
+		z-index: -1;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1em;
+		margin-bottom: 1em;
+		&__title {
+			color: $primary-color;
+		}
+	}
+}
+.skills {
+	background: $secondary-color;
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1em;
+		&__item {
+			background: $white-color;
+			padding: 2em 1rem;
+			border-radius: 1em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1em;
+			&__title {
+				text-transform: uppercase;
+				color: $primary-color;
+			}
+		}
+	}
+}
+.portfolio {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+		}
+	}
+}
+footer {
+	background: $black-color;
+	color: $white-color;
+}
+
+@media (min-width: 75em) {
+	html {
+		font-size: 130%;
+	}
+	header {
+		display: grid;
+		grid-template-columns: 66% auto;
+		.logo__nav__nav__list {
+			opacity: 1;
+			display: flex;
+			gap: 2em;
+			a {
+				color: $black-color;
+				font-weight: 700;
+			}
+		}
+		.logo__nav__hamburger {
+			display: none;
+		}
+		.social__icons {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			&__list {
+				display: flex;
+				gap: 2em;
+				img {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+	.hero {
+		height: 90vh;
+		display: grid;
+		grid-template-columns: 66% auto;
+		&__content {
+			justify-content: center;
+			align-items: flex-start;
+			&__heading {
+				text-align: unset;
+				font-size: 3.1rem;
+			}
+		}
+		&__design {
+			display: block;
+			width: 100%;
+			margin-left: -50%;
+		}
+	}
+	section {
+		padding: 5em 2rem;
+	}
+	.featured {
+		display: flex;
+		align-items: center;
+		gap: 2em;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 15em;
+			height: 15em;
+			border-radius: 50%;
+			background: $primary-color;
+			top: -4em;
+			left: -4em;
+			opacity: 0.2;
+			z-index: -1;
+		}
+		&__content {
+			align-items: flex-start;
+			text-align: left;
+		}
+		&__image {
+			width: 50%;
+		}
+	}
+	.skills__list {
+		flex-direction: row;
+	}
+	.portfolio {
+		flex-direction: row;
+		&__wrap__image img {
+			height: 20em;
+		}
+	}
+}

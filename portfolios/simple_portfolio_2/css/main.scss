@@ -1,0 +1,386 @@
+// Define all colors that used within the site
+$primary-color: coral;
+$white-color: #f6f6f6;
+$black-color: #161616;
+$grey-color: #c6c6c6;
+
+// Define the primary font of the site
+$primary-font: 'Montserrat', sans-serif;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	list-style: none;
+	font-family: $primary-font;
+}
+html {
+	line-height: 1.4;
+	scroll-behavior: smooth;
+}
+body {
+	line-height: 1.5;
+	background: $white-color;
+	overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+.btn {
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: 0.2s ease-in-out;
+	font-size: 1rem;
+}
+.btn--large {
+	padding: 1.5em 3rem;
+}
+.btn--medium {
+	padding: 1em 2rem;
+}
+header,
+footer {
+	padding: 2em 3rem;
+}
+section {
+	padding: 6em 3rem;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: $primary-color;
+	.logo h1 {
+		color: $white-color;
+		margin: 0;
+	}
+	nav {
+		.navbar__list {
+			display: flex;
+			align-items: center;
+			gap: 2em;
+			&__item {
+				a {
+					position: relative;
+					color: $white-color;
+					text-transform: uppercase;
+					&::after,
+					&.active::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: -1em;
+						width: 100%;
+						height: 0.1875em;
+						background: $white-color;
+					}
+					&::after {
+						transition: opacity 0.2s ease-in-out;
+						opacity: 0;
+					}
+					&:hover::after {
+						opacity: 1;
+					}
+					&.active::after {
+						opacity: 1;
+					}
+				}
+				&__button {
+					color: $white-color;
+					background: none;
+					border: 0.1875em solid $white-color;
+					&:hover {
+						background: $white-color;
+						color: $black-color;
+					}
+				}
+			}
+		}
+		.hamburger {
+			opacity: 0;
+			width: 1.875em;
+			height: 1.875em;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			span {
+				display: block;
+				width: 100%;
+				height: 0.1875em;
+				background: $white-color;
+			}
+		}
+	}
+}
+.hero {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2em;
+		&__hook {
+			display: flex;
+			flex-direction: column;
+			&__subtitle {
+				color: $grey-color;
+			}
+			&__title {
+				font-size: 4rem;
+			}
+		}
+		p {
+			text-align: justify;
+		}
+		&__button {
+			font-size: 1.2rem;
+			color: $white-color;
+			background: $primary-color;
+		}
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+.projects {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	background: $primary-color;
+	&__intro {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		&__title,
+		p {
+			color: $white-color;
+		}
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2em;
+		&__item {
+			background: $white-color;
+			padding: 2em 2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1em;
+			flex: 1 1 27.5em;
+			img {
+				width: 100%;
+			}
+			&__image {
+				width: 100%;
+				height: 20em;
+				background: linear-gradient(to right bottom, rgba(255, 127, 80, 0.8), rgba(255, 127, 80, 0.2));
+			}
+		}
+	}
+}
+.services {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	&__intro {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2em;
+		&__item {
+			color: $white-color;
+			background: $black-color;
+			padding: 2em 2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1em;
+			flex: 1 1 27.5em;
+			&__image {
+				width: 5em;
+				height: 5em;
+				background: linear-gradient(to right bottom, rgba(255, 127, 80, 0.8), rgba(255, 127, 80, 0.2));
+			}
+			&__desc {
+				text-align: justify;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+.hire {
+	background: $primary-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
+	&__intro {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		align-items: center;
+	}
+	&__form {
+		display: flex;
+		input[type='email'],
+		input[type='submit'] {
+			font-size: 1.2rem;
+			padding: 1em 2rem;
+		}
+		input[type='submit'] {
+			text-transform: uppercase;
+			font-weight: 700;
+			background: $black-color;
+			color: $white-color;
+			cursor: pointer;
+		}
+	}
+}
+footer {
+	background: $black-color;
+	color: $white-color;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	.footer__main {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		gap: 2em;
+		&__intro,
+		&__links,
+		&__fanpage {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 27.5em;
+			gap: 2em;
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5em;
+			li a {
+				color: $white-color;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.scroll__to__top {
+	position: fixed;
+	top: 50%;
+	right: 3rem;
+	width: 1em;
+	height: 1em;
+	font-size: 2rem;
+	font-weight: bold;
+	color: $white-color;
+	z-index: 1;
+	background: $black-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 112.5em) {
+	.hero {
+		flex-direction: column-reverse;
+		&__info {
+			&__hook {
+				align-items: center;
+			}
+			align-items: center;
+			p {
+				text-align: center;
+			}
+		}
+	}
+	.projects__intro,
+	.services__intro,
+	.hire__intro {
+		align-items: center;
+		p {
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 56.25em) {
+	header,
+	footer {
+		padding: 2em 2rem;
+	}
+	section {
+		padding: 6em 2rem;
+	}
+	header {
+		position: relative;
+		.navbar__list.showNav {
+			opacity: 1 !important;
+		}
+		.navbar__list.notShowNav {
+			opacity: 0;
+		}
+		nav {
+			.navbar__list {
+				position: absolute;
+				top: 7em;
+				left: 0;
+				background: $primary-color;
+				width: 100vw;
+				height: 50vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				transition: 0.2s ease-in-out;
+				z-index: 2;
+			}
+		}
+		.hamburger {
+			opacity: 1 !important;
+			position: relative;
+		}
+		.toggle .line1 {
+			transform: rotate(-45deg);
+			position: absolute;
+		}
+		.toggle .line2 {
+			opacity: 0;
+		}
+		.toggle .line3 {
+			transform: rotate(45deg);
+			position: absolute;
+		}
+	}
+	.scroll__to__top {
+		right: 2rem;
+	}
+}
