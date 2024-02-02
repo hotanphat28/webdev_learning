@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+:root {
+	--primary-color: #2980b9;
+	--secondary-color: #f6f6f6;
+}
+* {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+html {
+	line-height: 1.4;
+	scroll-behavior: smooth;
+}
+body {
+	height: 100vh;
+	line-height: 1.5;
+	background: linear-gradient(to right top, var(--primary-color), var(--secondary-color));
+	overflow-x: hidden;
+}
+.active {
+	display: block !important;
+}
+.contact__form {
+	z-index: 1;
+	width: 50vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--secondary-color);
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.3)
+	);
+	backdrop-filter: blur(1em);
+	color: #f8f8f8;
+	font-weight: 900;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	margin: 1em;
+	padding: 1em;
+	border-radius: 0.5em;
+	h2,
+	&-label,
+	&-input,
+	&-textarea {
+		color: #273c75;
+	}
+	h2 {
+		font-weight: 700;
+		font-size: 1.6rem;
+	}
+	&-label {
+		font-weight: 500;
+		&::after {
+			content: '*';
+			color: #c23616;
+		}
+	}
+	&-input,
+	&-textarea,
+	&-submit,
+	&-error {
+		background: linear-gradient(
+			to left top,
+			rgba(255, 255, 255, 0.1),
+			rgba(255, 255, 255, 0.7)
+		);
+		padding: 1em;
+		border-radius: 0.5em;
+	}
+	&-submit {
+		color: #273c75;
+		font-weight: 700;
+		cursor: pointer;
+	}
+	&-textarea {
+		resize: none;
+	}
+}
+.circle__top__right,
+.circle__bottom__left {
+	height: 20em;
+	width: 20em;
+	background: var(--secondary-color);
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.6),
+		rgba(255, 255, 255, 0.4)
+	);
+	position: absolute;
+	border-radius: 50%;
+}
+.circle__top__right {
+	top: 15%;
+	right: 20%;
+}
+.circle__bottom__left {
+	bottom: 15%;
+	left: 20%;
+}

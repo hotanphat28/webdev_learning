@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Glassmorphism Comment Form</title>
+	</head>
+	<body>
+		<main>
+			<div class="glass">
+				<h1 class="glass__heading">TRUST US! WE ARE HERE TO HEAR YOU.</h1>
+				<form class="glass__form" action="">
+					<label class="glass__form__label" for="categories"
+						>What will you feedback for?</label
+					>
+					<select class="glass__form__selection_list" name="categories" id="categories">
+						<option class="glass__form__selection_list_item" value="General">
+							General
+						</option>
+						<option class="glass__form__selection_list_item" value="Admin">
+							Admin
+						</option>
+						<option class="glass__form__selection_list_item" value="IT">IT</option>
+						<option class="glass__form__selection_list_item" value="">Policies</option>
+						<option class="glass__form__selection_list_item" value="HR">
+							Human Resources
+						</option>
+						<option class="glass__form__selection_list_item" value="Activities">
+							Activities
+						</option>
+						<option class="glass__form__selection_list_item" value="Training">
+							Training
+						</option>
+						<option class="glass__form__selection_list_item" value="Others">
+							Others
+						</option>
+					</select>
+					<label class="glass__form__label" for="title">Subject</label>
+					<input
+						class="glass__form__input"
+						type="text"
+						placeholder="Your title (ex. I would like to share...)"
+						required
+					/>
+					<label class="glass__form__label" for="details">Give us more details</label>
+					<textarea
+						class="glass__form__textarea"
+						name=""
+						id=""
+						cols="30"
+						rows="10"
+						placeholder="Please give more information/details about what you would like to share"
+						class="detail-box"
+					></textarea>
+					<div class="glass__form__button">
+						<button class="glass__form__button__comment">Comment</button>
+						<button class="glass__form__button__cancel">Cancel</button>
+					</div>
+				</form>
+			</div>
+			<div class="circle__top__right"></div>
+			<div class="circle__bottom__left"></div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Glassmorphism Contact Form</title>
+	</head>
+	<body>
+		<form class="contact__form" id="contact__form">
+			<h2>Contact Form</h2>
+
+			<label class="contact__form-label" for="name">Name</label>
+			<input
+				class="contact__form-input"
+				type="text"
+				id="name"
+				name="name"
+				placeholder="e.g. Example Example"
+				autocomplete="off"
+				autofocus
+				required
+			/>
+
+			<label class="contact__form-label" for="email">Email</label>
+			<input
+				class="contact__form-input"
+				type="email"
+				id="email"
+				name="email"
+				placeholder="e.g. email@example.com"
+				autocomplete="off"
+				autofocus
+				required
+			/>
+
+			<label class="contact__form-label" for="subject">Subject</label>
+			<input
+				class="contact__form-input"
+				type="text"
+				id="subject"
+				name="subject"
+				placeholder="e.g. Example subject"
+				autocomplete="off"
+				autofocus
+				required
+			/>
+
+			<label class="contact__form-label" for="message">Message</label>
+			<textarea
+				class="contact__form-textarea"
+				id="message"
+				name="message"
+				rows="20"
+				placeholder="e.g. Example message"
+			></textarea>
+
+			<button type="submit" class="contact__form-submit">Submit</button>
+		</form>
+		<div class="circle__top__right"></div>
+		<div class="circle__bottom__left"></div>
+	</body>
+</html>

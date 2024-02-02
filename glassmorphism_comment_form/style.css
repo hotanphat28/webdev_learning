@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --primary-color: #d63031;
+  --secondary-color: #f6f6f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.4;
+}
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  opacity: 0.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1em;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right top, var(--primary-color), var(--secondary-color));
+}
+main .glass {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 80vh;
+  width: 80%;
+  padding: 1em;
+  z-index: 2;
+  background: var(--secondary-color);
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border-radius: 2em;
+  -webkit-backdrop-filter: blur(1em);
+          backdrop-filter: blur(1em);
+}
+main .glass__form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+main .glass__form__label, main .glass__form__selection_list, main .glass__form__input, main .glass__form__textarea {
+  margin-bottom: 1em;
+  border-radius: 2em;
+}
+main .glass__form__label {
+  font-weight: 700;
+  color: var(--primary-color);
+  opacity: 0.8;
+}
+main .glass__form__textarea {
+  resize: none;
+}
+main .glass__form__selection_list, main .glass__form__input, main .glass__form__textarea {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  padding: 1em 1rem;
+}
+main .glass__form__button__comment, main .glass__form__button__cancel {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  padding: 1em 2rem;
+  opacity: 0.8;
+  border-radius: 2em;
+}
+main .circle__top__right,
+main .circle__bottom__left {
+  height: 20em;
+  width: 20em;
+  background: var(--secondary-color);
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  position: absolute;
+  border-radius: 50%;
+}
+main .circle__top__right {
+  top: 5%;
+  right: 15%;
+}
+main .circle__bottom__left {
+  bottom: 5%;
+  left: 10%;
+}/*# sourceMappingURL=style.css.map */
