@@ -1,0 +1,109 @@
+:root{
+    --dark-color: #14241b;
+    --highlight-color: #959446;
+    --shadow-color: #42630d;
+    --background-pink: #ed9f7d;
+    --background-light-yellow: #fcef9c;
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cascadia Mono', monospace;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.grid-container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    background: #686868;
+}
+.grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--dark-color);
+    box-shadow: 2px 2px var(--dark-color),
+    4px 4px var(--dark-color);
+}
+button{
+    padding: 1rem 2rem;
+    border-width: 2px;
+    border-style: solid;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+    transition: all .2s linear;
+    cursor: pointer;
+    border-color: var(--dark-color);
+    background: var(--highlight-color);
+    box-shadow: 2px 2px var(--dark-color),
+    4px 4px var(--dark-color);
+}
+button:hover{
+    background: var(--shadow-color);
+    color: var(--highlight-color);
+    box-shadow: 0 0 transparent;
+}
+.grid-item:nth-child(1),
+.grid-item:nth-child(3),
+.grid-item:nth-child(5),
+.grid-item:nth-child(7),
+.grid-item:nth-child(9){
+    background: var(--background-pink);
+}
+.grid-item:nth-child(2),
+.grid-item:nth-child(4),
+.grid-item:nth-child(6),
+.grid-item:nth-child(8){
+    background: var(--background-light-yellow);
+}
+
+button.two{
+    border-radius: 4px;
+}
+
+button.three{
+    border-radius: 4px 8px 4px 8px;
+}
+
+button.four{
+    border-radius: 8px 16px 8px 16px;
+}
+
+button.five{
+    border-radius: 16px 32px 16px 32px;
+}
+
+button.six{
+    border-radius: 32px;
+}
+
+button.seven{
+    border-radius: 100%;
+}
+
+button.eight{
+    border-radius: 69% 10% 69% 10%;
+}
+
+button.nine{
+    border-radius: 20% 30% 10% 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+    button{
+        font-size: 2rem;
+    }
+}

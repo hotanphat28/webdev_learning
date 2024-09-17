@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+}
+html {
+  line-height: 1.4;
+}
+body {
+  line-height: 1.5;
+  overflow-x: none;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.justify-start{justify-content: flex-start;}
+.justify-around{justify-content: space-around;}
+.justify-evenly{justify-content: space-evenly;}
+.justify-between{justify-content: space-between;}
+.justify-center{justify-content: center;}
+.justify-end{justify-content: flex-end;}
+.align-start{align-items: start;}
+.align-center{align-items: center;}
+.align-end{align-items: end;}
+.flex-column{flex-direction: column;}
+.flex-reverse-column{flex-direction: column-reverse;}
+.flex-reverse-row{flex-direction: row-reverse;}
+.parent {
+  display: flex;
+  width: 25em;
+  height: 25em;
+  margin: 1em;
+  padding: 1em;
+  border: 0.5em solid #282828;
+  border-radius: 0.5em;
+}
+.child {
+  border-radius: 0.5em;
+  background: #282828;
+  color: #f8f8f8;
+  text-align: center;
+}
+.child-1{
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+}
+.child-2{
+  width: 9em;
+  height: 9em;
+  line-height: 9em;
+}
+.child-3{
+  width: 6em;
+  height: 6em;
+  line-height: 6em;
+}
+.justify-buttons,.align-buttons,.direction-buttons{
+  width: 25em;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+button{
+  padding: 1em;
+  border: 0.3em solid #282828;
+  border-radius: 0.5em;
+  cursor: pointer;
+  flex-grow: 1;
+  font-weight: 500;
+}
