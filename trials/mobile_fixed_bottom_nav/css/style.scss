@@ -10,14 +10,17 @@
 	text-decoration: none;
 	box-sizing: border-box;
 }
+
 html {
 	line-height: 1.4;
 	scroll-behavior: smooth;
 }
+
 body {
 	line-height: 1.5;
 	overflow-x: hidden;
 }
+
 .bg--red {
 	background: #e63946;
 }
@@ -27,35 +30,49 @@ body {
 }
 
 .bg--black {
-	background: #000;
+	background: #080808;
 }
+
 .fixedBottomNav {
 	position: fixed;
 	bottom: 0;
-	background: hsl(0, 0%, 70%);
+	background: #e8e8e8;
 	width: 100vw;
 	padding: 2em 1rem;
+
 	&__list {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+
 		&__item {
 			padding: 1em 2rem;
+			border-radius: .5rem;
+
 			&__link {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				gap: 1em;
-				color: #fff;
+				color: #f8f8f8;
+
 				&__image {
 					width: 3em;
 					height: auto;
 				}
+
 				&__title {
 					text-transform: uppercase;
 					font-weight: 700;
 				}
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 535px) {
+	.fixedBottomNav__list__item {
+		padding: .5em 1rem;
+		font-size: .8rem;
 	}
 }

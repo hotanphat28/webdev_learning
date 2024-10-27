@@ -67,7 +67,13 @@ footer {
 	grid-area: footer;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 535px) {
+	html {
+		font-size: 80%;
+	}
+}
+
+@media screen and (max-width: 768px) {
 	main {
 		grid-template-areas:
 			'header'
@@ -79,5 +85,11 @@ footer {
 
 	nav {
 		grid-area: header;
+	}
+}
+
+@media screen and (min-width: 1441px) {
+	html {
+		font-size: 150%;
 	}
 }
