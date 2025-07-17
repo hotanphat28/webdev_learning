@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music & Video App</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+</head>
+
+<body>
+    <!-- Interaction Overlay -->
+    <div id="interaction-overlay">
+        <button id="start-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#f8f8f8">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l6-5-6-5v10z" />
+            </svg> Bắt đầu
+        </button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li>Trang chủ</li>
+            <li>Thư viện</li>
+            <li>Cài đặt</li>
+        </ul>
+    </nav>
+
+    <!-- Video Background Section -->
+    <div class="video-container">
+        <video id="background-video" autoplay muted loop>
+            <source src="./assets/videos/beach.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Video Controls -->
+        <div class="video-controls">
+            <button onclick="changeVideo('./assets/videos/beach.mp4')">🌊</button>
+            <button onclick="changeVideo('./assets/videos/mountain.mp4')">⛰️</button>
+            <button onclick="changeVideo('./assets/videos/cityscape.mp4')">🏙️</button>
+        </div>
+        <!-- Toggle Filter Button -->
+        <div class="filter-toggle">
+            <button id="toggle-filter">Đổi màu video</button>
+        </div>
+    </div>
+
+    <!-- Music Player Section -->
+    <div class="music-player">
+        <button id="play-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#f8f8f8">
+                <path d="M8 5v14l11-7z" />
+            </svg>
+        </button>
+        <button id="pause-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#f8f8f8">
+                <path d="M6 19h4V5H6zm8-14v14h4V5z" />
+            </svg>
+        </button>
+        <button id="next-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#f8f8f8">
+                <path d="M6 18l8.5-6L6 6v12zm9-12v12h2V6h-2z" />
+            </svg>
+        </button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#f8f8f8">
+            <path d="M3 10v4h4l5 5V5l-5 5H3zm13.5 2c0-1.77-1.02-3.29-2.5-4.03v8.06c1.48-.74 2.5-2.26 2.5-4.03z" />
+        </svg>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <!-- Playlist Section -->
+    <div class="playlist">
+        <h3>Danh sách phát</h3>
+        <ul id="playlist-container"></ul>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

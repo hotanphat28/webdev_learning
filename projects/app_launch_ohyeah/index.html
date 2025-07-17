@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OhYeah - A wonderful app to explore!</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+  <!--Header-->
+  <header class="bg--black">
+    <div class="container header">
+      <!--Logo-->
+      <div class="logo">
+        <a href="#">Oh<span>Yeah</span></a>
+        <div class="action-cta">
+          <div id="hamburger" class="hamburger"></div>
+          <div id="exit" class="exit"></div>
+        </div>
+      </div>
+      <!--Navigation-->
+      <nav>
+        <ul class="primary-nav">
+          <li class="primary-nav-item current"><a href="#">Home</a></li>
+          <li class="primary-nav-item"><a href="#features">Features</a></li>
+          <li class="primary-nav-item"><a href="#testimonials">Testimonials</a></li>
+        </ul>
+        <ul class="secondary-nav">
+          <li class="secondary-nav-item"><a href="#contact">Contact</a></li>
+          <li class="secondary-nav-item go-premium-cta"><a href="#">Go Premium<a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--Hero-->
+  <div class="hero bg--light">
+    <div class="container">
+      <div class="hero-info">
+        <p class="hero-info-sub-heading">It's Great &amp; Sneaky</p>
+        <h1 class="hero-info-heading">A Wonderful App To Use</h1>
+        <div class="hero-info-ctas">
+          <a href="#" class="hero-info-try-cta">Try for free</a>
+          <a href="#" class="hero-info-watch-cta"><img src="./assets/svg/video-camera.svg"
+              class="hero-info-watch-cta-icon" alt="Watch a video" />
+            Watch a video</a>
+        </div>
+      </div>
+      <img src="./assets/svg/user-interface.svg" class="hero-info-illustration" alt="Illustration" />
+    </div>
+  </div>
+  <!--Features-->
+  <section id="features" class="features bg--black">
+    <ul class="container features-list">
+      <li>Unlimited Access</li>
+      <li>Multiple Time Management Session</li>
+      <li>Real Time Collaboration</li>
+      <li>Social Media Connection</li>
+      <li>Great For Group Using</li>
+      <li>Support More Than 1000 Devices</li>
+      <li>Other Awesome Features</li>
+    </ul>
+    <img src="./assets/img/hand-hold-phone.jpg" alt="A hand is holding a mobile device" />
+  </section>
+  <!--Testimonials-->
+  <section id="testimonials" class="testimonials bg--primary">
+    <ul class="container">
+      <li>
+        <img src="./assets/img/profile.png" alt="Person" />
+        <blockquote>
+          "This is the most amazing app that I have used. It helps me a lot in
+          life."
+        </blockquote>
+        <cite>- Unknown</cite>
+      </li>
+      <li>
+        <img src="./assets/img/profile.png" alt="Person" />
+        <blockquote>
+          "This is the most amazing app that I have used. It helps me a lot in
+          life."
+        </blockquote>
+        <cite>- Unknown</cite>
+      </li>
+      <li>
+        <img src="./assets/img/profile.png" alt="Person" />
+        <blockquote>
+          "This is the most amazing app that I have used. It helps me a lot in life."
+        </blockquote>
+        <cite>- Unknown</cite>
+      </li>
+    </ul>
+  </section>
+  <!--Contact-->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contactForm">
+        <h2>Contact</h2>
+        <form action="/" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="off" autofocus required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="off" autofocus required />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <input type="submit" class="send-message-cta bg--primary" value="Send Message" />
+        </form>
+      </div>
+      <div class="contactMap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31354.072779864324!2d106.60989491740655!3d10.791457007919098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bf733e69175%3A0xd8d63453733325fe!2sT%C3%A2n%20Ph%C3%BA%2C%20Ho%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2s!4v1617172604934!5m2!1sen!2s"
+          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <footer class="bg--black">
+    <div class="container">
+      Designed and coded by <i><strong>Hồ Tấn Phát</strong></i>
+    </div>
+  </footer>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const exit = document.getElementById("exit");
+    const nav = document.querySelector("nav");
+    hamburger.addEventListener("click", function () {
+      nav.classList.add("showMenu");
+      exit.classList.add("showExit");
+      hamburger.classList.add("hideHamburger");
+    });
+    exit.addEventListener("click", function () {
+      nav.classList.remove("showMenu");
+      exit.classList.remove("showExit");
+      hamburger.classList.remove("hideHamburger");
+    });
+  </script>
+</body>
+
+</html>

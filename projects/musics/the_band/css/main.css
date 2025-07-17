@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+.gap-1em {
+  gap: 1em;
+}
+
+.gap-2em {
+  gap: 2em;
+}
+
+.px-1rem {
+  padding: 0 1rem;
+}
+
+.mt-1em {
+  margin-top: 1em;
+}
+
+.border-radius {
+  border-radius: 0.2rem;
+}
+
+.bg-main {
+  background: darkred;
+}
+
+.bg-black {
+  background: #000;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-grey {
+  background: #ccc;
+}
+
+.text-main {
+  color: darkred;
+}
+
+.text-black {
+  color: #000;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-grey {
+  color: #ccc;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-700 {
+  font-weight: 700;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100vw;
+}
+
+header,
+footer {
+  background: #000;
+  color: #fff;
+}
+
+header {
+  padding-inline: 4rem;
+}
+
+footer {
+  padding: 1em 4rem;
+}
+
+section {
+  padding: 6em 4rem;
+}
+
+header {
+  position: fixed;
+  height: 3.125em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo__title {
+  font-size: 1.5rem;
+}
+header .hamburger {
+  display: none;
+}
+header .navBar__list {
+  height: 3.125em;
+  display: flex;
+  align-items: center;
+}
+header .navBar__list__item {
+  position: relative;
+  height: 100%;
+  line-height: 3.125em;
+}
+header .navBar__list__item:hover {
+  background: darkred;
+}
+header .navBar__list__item:hover .navBar__list__item__subNav {
+  display: block;
+}
+header .navBar__list__item__subNav {
+  position: absolute;
+  left: 0;
+  display: none;
+  background: darkred;
+}
+header .search {
+  height: 3.125em;
+  width: 3.125em;
+  cursor: pointer;
+}
+header .search:hover {
+  background: darkred;
+}
+
+.slider {
+  height: 80vh;
+  padding: 3.125em 0 0;
+}
+.slider__item {
+  height: 100%;
+}
+.slider__item:nth-child(1) {
+  background: url("https://www.w3schools.com/w3images/la.jpg") center center/cover no-repeat;
+  display: none;
+}
+.slider__item:nth-child(2) {
+  background: url("https://www.w3schools.com/w3images/ny.jpg") center center/cover no-repeat;
+  display: none;
+}
+.slider__item:nth-child(3) {
+  background: url("https://www.w3schools.com/w3images/chicago.jpg") top center/cover no-repeat;
+}
+.slider__item__heading, .slider__item__desc {
+  background: rgba(0, 0, 0, 0.6);
+}
+.slider__item__heading {
+  font-size: 3rem;
+  letter-spacing: 0.3em;
+}
+.slider__item__desc {
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+
+.intro__heading {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+.intro__artists__list {
+  margin-top: 1em;
+}
+
+.tour__heading {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+.tour__list {
+  width: 100%;
+}
+.tour__list__item {
+  padding: 1em 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.0625rem solid #ccc;
+}
+.tour__list__item:last-child {
+  border: 0;
+}
+.tour__list__item__countNumber, .tour__list__item__soldOut {
+  padding: 0 0.5rem;
+}
+.tour__locations__list__item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1em 1rem;
+}
+.tour__locations__list__item__info__heading {
+  font-size: 1.5rem;
+}
+.tour__locations__list__item__info__date {
+  font-size: 0.75rem;
+}
+.tour__locations__list__item__info__button {
+  padding: 1em 1rem;
+  font-weight: 500;
+}
+.tour__locations__list__item__info__button:hover {
+  background: #ccc;
+  color: #000;
+}
+
+.open {
+  display: flex !important;
+}
+
+.buy__tickets__modal {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.buy__tickets__modal__box {
+  animation: buyTicketsModalSlideDown 0.6s ease-in-out;
+}
+.buy__tickets__modal__box__heading {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  gap: 0.5em;
+  padding: 1em 0;
+}
+.buy__tickets__modal__box__form {
+  padding: 1em 1rem;
+}
+.buy__tickets__modal__box__form__label, .buy__tickets__modal__box__form__input, .buy__tickets__modal__box__form__buttons__pay, .buy__tickets__modal__box__form__buttons__cancel {
+  width: 100%;
+}
+.buy__tickets__modal__box__form__label {
+  font-weight: 500;
+}
+.buy__tickets__modal__box__form__input {
+  border: #ccc 0.1rem solid;
+  height: 3.5rem;
+  text-indent: 1em;
+}
+.buy__tickets__modal__box__form__buttons {
+  width: 100%;
+}
+.buy__tickets__modal__box__form__buttons__pay, .buy__tickets__modal__box__form__buttons__cancel {
+  font-weight: 700;
+  height: 3.5rem;
+  gap: 0.5em;
+}
+.buy__tickets__modal__box__form__buttons__pay:hover, .buy__tickets__modal__box__form__buttons__cancel:hover {
+  opacity: 0.8;
+}
+.buy__tickets__modal__box__form__buttons__pay {
+  background: green;
+}
+.buy__tickets__modal__box__form__buttons__cancel {
+  background: red;
+}
+
+@keyframes buyTicketsModalSlideDown {
+  from {
+    transform: translateY(-10em);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.contact__heading {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+.contact__area {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1em;
+}
+.contact__area__address {
+  display: flex;
+  flex-direction: column;
+}
+.contact__area__address__item {
+  display: flex;
+  align-items: center;
+}
+.contact__area__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.contact__area__form__input__text, .contact__area__form__input__email, .contact__area__form__textarea, .contact__area__form__send {
+  height: 3.5em;
+  padding: 1em 1rem;
+}
+.contact__area__form__send {
+  font-weight: 500;
+}
+.contact__area__form__send:hover {
+  background: #ccc;
+  color: #000;
+}
+
+.footer__image {
+  height: 80vh;
+  background: url("https://www.w3schools.com/w3images/map.jpg") center center/cover no-repeat;
+}
+
+footer .socialNetworks {
+  padding: 1em 0;
+}
+footer .socialNetworks__item {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+footer .socialNetworks__item:hover svg {
+  fill: darkred;
+}
+footer .copyright {
+  text-align: center;
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  header {
+    padding-inline: 2rem;
+  }
+  footer {
+    padding: 1em 2rem;
+  }
+  section {
+    padding: 3em 2rem;
+  }
+  .buy__tickets__modal__box {
+    width: 90vw;
+  }
+}
+@media (max-width: 740px) {
+  html {
+    font-size: 62.5%;
+  }
+  header {
+    padding-inline: 1rem;
+  }
+  .openNav {
+    display: block !important;
+  }
+  nav {
+    display: none !important;
+  }
+  nav .navBar__list {
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 3.125em;
+    right: 0;
+    flex-direction: column;
+    text-align: right;
+    background: #000;
+  }
+  nav .navBar__list__item {
+    width: 100%;
+  }
+  nav .navBar__list__item__subNav {
+    width: 100%;
+  }
+  .search {
+    display: none !important;
+  }
+  .hamburger {
+    position: relative;
+    width: 2rem;
+    height: 0.2rem;
+    display: block !important;
+    background: #fff;
+  }
+  .hamburger::before, .hamburger::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: inherit;
+  }
+  .hamburger::before {
+    top: -0.5rem;
+  }
+  .hamburger::after {
+    top: 0.5rem;
+  }
+  .buy__tickets__modal__box {
+    width: 90vw;
+  }
+  footer {
+    padding: 1em 1rem;
+  }
+  section {
+    padding: 4em 1rem;
+  }
+  .intro__artists__list,
+  .tour__locations__list,
+  .contact__area {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contact__area__form__input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+  }
+}/*# sourceMappingURL=main.css.map */
